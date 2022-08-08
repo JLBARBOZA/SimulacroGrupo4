@@ -1,19 +1,16 @@
 package com.calidaddelsoftware.project;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.*;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
-
 import org.junit.After;
 import org.junit.Before;
-
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+
 
 //Gerson Fernandez
 
@@ -50,8 +47,12 @@ private WebDriver driver;
 	By AddFNameLocator = By.xpath("//*[@id=\"FirstName\"]");
 	By AddLNameLocator = By.xpath("//*[@id=\"LastName\"]");
 	By SaveNewCustomerButtonLocator = By.xpath("/html/body/div[3]/div[1]/form/div[1]/div/button[1]");
+	//Localizadores para ASSERTS
+	By UpdatedLocator = By.xpath("/html/body/div[3]/div[1]/div[1]");
+	By NewCusLocator = By.xpath("/html/body/div[3]/div[1]/div[1]");
 	
-	@BeforeTest
+	
+	@Before
 	public void setUp() throws InterruptedException {
 	
 		
@@ -68,11 +69,7 @@ private WebDriver driver;
 			driver.manage().window().maximize();
 			driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
 			
-			driver.findElement(emailLocator).clear();
-			driver.findElement(emailLocator).sendKeys("admin@yourstore.com");
 			
-			driver.findElement(passwordLocator).clear();
-			driver.findElement(passwordLocator).sendKeys("admin");
 			
 			driver.findElement(logInButtonLocator).click();
 			
@@ -89,7 +86,16 @@ private WebDriver driver;
 			driver.findElement(LastNameEditLocator).sendKeys("Test1");
 			driver.findElement(SaveChangesCustomerEditLocator).click();
 			
-	}
+			if(driver.findElement(UpdatedLocator).isDisplayed()) {
+				assertTrue(driver.findElement(UpdatedLocator).isDisplayed());
+				System.out.print("Prueba ejectutada exitosamente");
+			}else {
+				System.out.print("Error");
+			}
+				
+			}
+			
+	
 	
 	
 	@Test
@@ -114,15 +120,22 @@ private WebDriver driver;
 		driver.findElement(CustomersLocator2).click();
 		
 		driver.findElement(AddNewCustomerButtonLocator).click();
-		driver.findElement(AddEmailLocator).sendKeys("pruebasPararellTesting@grupo4.com");
-		driver.findElement(AddPasswordLocator).sendKeys("PruebaParallel");
+		driver.findElement(AddEmailLocator).sendKeys("ProyectodelGruopo4@grupo4.com");
+		driver.findElement(AddPasswordLocator).sendKeys("PruebasAutomatizadas");
 		driver.findElement(AddFNameLocator).sendKeys("Usuario");
 		driver.findElement(AddLNameLocator).sendKeys("Test2");
 		driver.findElement(SaveNewCustomerButtonLocator).click();
+		
+		if(driver.findElement(NewCusLocator).isDisplayed()) {
+			assertTrue(driver.findElement(NewCusLocator).isDisplayed());
+			System.out.print("Prueba ejectutada exitosamente");
+		}else {
+			System.out.print("Error");
+		}
 	}
 		
 
-	 @AfterTest
+	 @After
 	 public void tearDown() {
 		// driver.close();
 	 }

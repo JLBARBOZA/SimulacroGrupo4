@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-24T00:22:41 CST" name="Suite2" finished-at="2022-07-24T00:22:56 CST" duration-ms="15160">
+  <suite started-at="2022-08-08T00:51:51 CST" name="Default suite" finished-at="2022-08-08T00:51:58 CST" duration-ms="7353">
     <groups>
     </groups>
-    <test started-at="2022-07-24T00:22:41 CST" name="Test2" finished-at="2022-07-24T00:22:56 CST" duration-ms="15160">
+    <test started-at="2022-08-08T00:51:51 CST" name="Default test" finished-at="2022-08-08T00:51:58 CST" duration-ms="7353">
       <class name="com.calidaddelsoftware.project.Test2">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.calidaddelsoftware.project.Test2@4fb61f4a]" started-at="2022-07-24T00:22:41 CST" name="setUp" finished-at="2022-07-24T00:22:41 CST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.calidaddelsoftware.project.Test2@4cc451f2]" started-at="2022-08-08T00:51:51 CST" name="setUp" finished-at="2022-08-08T00:51:51 CST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="SearchandEditCustomer()[pri:0, instance:com.calidaddelsoftware.project.Test2@4fb61f4a]" started-at="2022-07-24T00:22:41 CST" name="SearchandEditCustomer" finished-at="2022-07-24T00:22:48 CST" duration-ms="7781" status="PASS">
+        <test-method signature="SearchandEditCustomer()[pri:0, instance:com.calidaddelsoftware.project.Test2@4cc451f2]" started-at="2022-08-08T00:51:51 CST" name="SearchandEditCustomer" finished-at="2022-08-08T00:51:58 CST" duration-ms="7320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchandEditCustomer -->
-        <test-method signature="CreateCustomer()[pri:0, instance:com.calidaddelsoftware.project.Test2@4fb61f4a]" started-at="2022-07-24T00:22:41 CST" name="CreateCustomer" finished-at="2022-07-24T00:22:56 CST" duration-ms="15131" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateCustomer -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.calidaddelsoftware.project.Test2@4fb61f4a]" started-at="2022-07-24T00:22:56 CST" name="tearDown" finished-at="2022-07-24T00:22:56 CST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.calidaddelsoftware.project.Test2@4cc451f2]" started-at="2022-08-08T00:51:58 CST" name="tearDown" finished-at="2022-08-08T00:51:58 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.calidaddelsoftware.project.Test2 -->
-    </test> <!-- Test2 -->
-  </suite> <!-- Suite2 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
