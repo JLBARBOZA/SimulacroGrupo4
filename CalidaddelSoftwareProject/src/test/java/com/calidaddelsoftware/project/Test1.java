@@ -102,8 +102,6 @@ public class Test1 {
 		
 	}
 	
-
-	
 	@Test
 	public void test2() throws Exception {
 		System.out.println("Test 2 run | "+Thread.currentThread().getId());
@@ -135,8 +133,6 @@ public class Test1 {
 		}
 		
 	}
-
-	
 	 @After
 	 public void tearDown() {
 		 driver.close();
