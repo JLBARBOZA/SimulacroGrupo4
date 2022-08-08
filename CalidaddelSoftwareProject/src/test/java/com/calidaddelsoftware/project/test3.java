@@ -1,5 +1,7 @@
 package com.calidaddelsoftware.project;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -35,8 +37,8 @@ public class test3 {
 	         //cambiar nombre
 	         driver.findElement(By.id("Name")).clear();
 	         driver.findElement(By.id("Name")).sendKeys("30$ discount");
-	         //cambiar tipo
-	         
+	
+	         //cambiar tip	         
 	         WebElement CamMenuDesc=  driver.findElement(By.id("DiscountTypeId"));
 	         Select CamselectMDesc= new Select(CamMenuDesc);
 	         CamselectMDesc.selectByIndex(1);
@@ -73,7 +75,24 @@ public class test3 {
 	        
 	         //guardar
 	         driver.findElement(By.xpath("//*[@id=\"discount-form\"]/div[1]/div/button[1]")).click();
+	         
+	         //regresar a la pagina de promociones y guardar datos
+	         driver.manage().timeouts().implicitlyWait(9,TimeUnit.SECONDS);
+	         String nombreAct=driver.findElement(By.xpath("//*[@id=\"discounts-grid\"]/tbody/tr[1]/td[1]")).getText();
+	         String TipoDescAct=driver.findElement(By.xpath("//*[@id=\"discounts-grid\"]/tbody/tr[1]/td[2]")).getText();
+	         String descuentoAct=driver.findElement(By.xpath("//*[@id=\"discounts-grid\"]/tbody/tr[1]/td[3]")).getText();
+	         String nombreSpe="30$ discount";
+	         String TipoDescSpe="Assigned to products";
+	         String descuentoSpet="30 USD";
+	         
+	         //verificar assets
+	         boolean nombreBool=nombreAct.equals(nombreSpe);
+	         boolean TipoBool=TipoDescAct.equals(TipoDescSpe);
+	         boolean DescueBool=descuentoAct.equals(descuentoSpet);
+	         boolean finalBool=nombreBool&&TipoBool&&DescueBool;
+	         assertTrue(finalBool);
 
+	        
 	         // Se cierra el driver
 	         driver.close();
 	         
@@ -144,6 +163,23 @@ public class test3 {
 	        	
 	       //guardar
 	       driver.findElement(By.xpath("//*[@id=\"discount-form\"]/div[1]/div/button[1]")).click();
+	       
+	       //regresar a la pagina de promociones y guardar datos
+	         driver.manage().timeouts().implicitlyWait(9,TimeUnit.SECONDS);
+	         String nombreAct=driver.findElement(By.xpath("//*[@id=\"discounts-grid\"]/tbody/tr[1]/td[1]")).getText();
+	         String TipoDescAct=driver.findElement(By.xpath("//*[@id=\"discounts-grid\"]/tbody/tr[1]/td[2]")).getText();
+	         String descuentoAct=driver.findElement(By.xpath("//*[@id=\"discounts-grid\"]/tbody/tr[1]/td[3]")).getText();
+	         String nombreSpe="10% Promotion 2022";
+	         String TipoDescSpe="Assigned to order subtotal";
+	         String descuentoSpet="10%";
+	         
+	         //verificar asserts
+	         boolean nombreBool=nombreAct.equals(nombreSpe);
+	         boolean TipoBool=TipoDescAct.equals(TipoDescSpe);
+	         boolean DescueBool=descuentoAct.equals(descuentoSpet);
+	         boolean finalBool=nombreBool&&TipoBool&&DescueBool;
+	         assertTrue(finalBool);
+
 	       
 	       // Se cierra el driver
 	       driver.close();

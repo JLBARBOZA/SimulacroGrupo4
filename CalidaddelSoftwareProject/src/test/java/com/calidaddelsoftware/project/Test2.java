@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-//Gerson Fernandez A
+//Gerson Fernandez Artavia
 
 public class Test2 {
 	
@@ -24,7 +24,9 @@ private WebDriver driver;
 	By passwordLocator = By.name("Password");
 	By logInButtonLocator = By.xpath("/html/body/div[6]/div/div/div/div/div[2]/div[1]/div/form/div[3]/button");
 	
+	
 	//--------------------------------------------------------------------------------------------------------------------------//
+	
 	
 	//Localizadores para Customers
 	By MenuBarsLocator = By.xpath("//*[@id=\"nopSideBarPusher\"]/i");

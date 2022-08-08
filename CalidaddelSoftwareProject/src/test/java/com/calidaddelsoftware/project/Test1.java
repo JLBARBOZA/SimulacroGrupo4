@@ -112,10 +112,13 @@ public class Test1 {
 	}
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 	
+=======
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 	@Test
 	public void test2() throws Exception {
 		System.out.println("Test 2 run | "+Thread.currentThread().getId());
@@ -170,11 +173,14 @@ public class Test1 {
 =======
 		
 	}
+<<<<<<< HEAD
 >>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 
 	
 <<<<<<< HEAD
 	
+=======
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 =======
 >>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 	 @After

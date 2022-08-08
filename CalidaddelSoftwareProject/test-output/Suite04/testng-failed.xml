@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite04]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Test04(failed)">
+    <classes>
+      <class name="com.calidaddelsoftware.project.test04">
+        <methods>
+          <include name="Test02ReportsProducstNeverPurchased"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.calidaddelsoftware.project.test04 -->
+    </classes>
+  </test> <!-- Test04(failed) -->
+</suite> <!-- Failed suite [Suite04] -->
