@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-//Gerson Fernandez
+//Gerson Fernandez A
 
 public class Test2 {
 	

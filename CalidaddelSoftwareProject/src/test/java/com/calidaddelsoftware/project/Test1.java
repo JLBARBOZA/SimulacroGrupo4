@@ -1,6 +1,12 @@
 package com.calidaddelsoftware.project;
 
+<<<<<<< HEAD
 import static org.junit.Assert.*;
+=======
+
+import static org.junit.Assert.*;
+
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 import org.junit.After;
@@ -11,10 +17,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 
 
 public class Test1 {
 	
+
 	WebDriver driver=null;
 	
 	By EmailLocator= By.xpath("//*[@id=\"Email\"]");
@@ -39,6 +50,10 @@ public class Test1 {
 	
 	@Test
 	public void test1() throws Exception {
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 		
 		System.out.println("Test 1 run | "+Thread.currentThread().getId());
 		Thread.sleep(1500);
@@ -96,6 +111,10 @@ public class Test1 {
 		
 	}
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 	
 	@Test
 	public void test2() throws Exception {
@@ -109,6 +128,7 @@ public class Test1 {
 		String actualTitulo= driver.getTitle();
 		String Titulo= "Your store. Login";
 		assertEquals(actualTitulo, Titulo);
+<<<<<<< HEAD
 		driver.findElement(InputloginLocator).click();
 		driver.findElement(PasswordLocator).clear();;
 		driver.findElement(EmailLocator).clear();
@@ -119,20 +139,47 @@ public class Test1 {
 		//assert para comprobar que el boton de logout esta habilitado
 		assertTrue(driver.findElement(By.xpath("//*[@id=\"navbarText\"]/ul/li[3]/a")).isEnabled());
           //@@ -125,7 +129,7 @@ public void test2() throws Exception {
+=======
+		driver.findElement(PasswordLocator).clear();;
+		driver.findElement(EmailLocator).clear();
+		driver.findElement(PasswordLocator).sendKeys("admin");
+		driver.findElement(EmailLocator).sendKeys("admin@yourstore.com");
+		driver.findElement(InputloginLocator1).click();
+		Thread.sleep(2000);
+		//assert para comprobar que el boton de logout esta habilitado
+		assertTrue(driver.findElement(By.xpath("//*[@id=\"navbarText\"]/ul/li[3]/a")).isEnabled());
+		driver.findElement(By.xpath("//*[@id=\"navbarText\"]/ul/li[3]/a")).click();
+		
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 		if(driver.findElement(By.xpath("/html/body/div[6]/div/div/div/div/div[1]/h1")).isDisplayed()) {
 			//assert para comprobar que se realizo el logout correctamente
 			assertTrue(driver.findElement(Logout).isDisplayed());
+<<<<<<< HEAD
 			System.out.println("Test de Login y Logout Pasados Correctamente"); 
+=======
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 			System.out.println("Test de Login y Logout Pasado Correctamente"); 
 		}else {
+<<<<<<< HEAD
 			System.out.println("Test de Login y Logout no pasaron el test Correctamente");}
+=======
+			System.out.println("Test de Login y Logout no pasaron el test Correctamente");
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 		}
+<<<<<<< HEAD
+=======
+		
+	}
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 
 	
+<<<<<<< HEAD
 	
+=======
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
 	 @After
 	 public void tearDown() {
-		// driver.close();
+		 driver.close();
 	 }
 
 }

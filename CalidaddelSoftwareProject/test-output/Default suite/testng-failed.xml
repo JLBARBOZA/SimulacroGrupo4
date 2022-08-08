@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.calidaddelsoftware.project.Test2">
+      <class name="com.calidaddelsoftware.project.TestProyecto">
         <methods>
+<<<<<<< HEAD
           <include name="tearDown"/>
           <include name="setUp"/>
           <include name="SearchandEditCustomer"/>
+=======
+          <include name="test1"/>
+>>>>>>> branch 'master' of https://github.com/JLBARBOZA/SimulacroGrupo4.git
         </methods>
-      </class> <!-- com.calidaddelsoftware.project.Test2 -->
+      </class> <!-- com.calidaddelsoftware.project.TestProyecto -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
