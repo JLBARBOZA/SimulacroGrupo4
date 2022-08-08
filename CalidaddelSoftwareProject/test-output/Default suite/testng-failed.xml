@@ -5,9 +5,9 @@
     <classes>
       <class name="com.calidaddelsoftware.project.Test2">
         <methods>
-          <include name="CreateCustomer"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="SearchandEditCustomer"/>
         </methods>
       </class> <!-- com.calidaddelsoftware.project.Test2 -->
     </classes>
